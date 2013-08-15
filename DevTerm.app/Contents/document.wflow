@@ -51,7 +51,8 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on newTerminalTab(tabName, tabCommand)	tell application "System Events" to tell process "Terminal.app" to keystroke "t" using command down	tell application "Terminal"		set currentTab to do script tabCommand in window 1		set custom title of currentTab to tabName	end tellend newTerminalTabon newTerminalWindow(tabName, tabCommand)	tell application "Terminal"		activate	end tell		tell application "Terminal"		activate		set firstTab to do script tabCommand		set custom title of firstTab to tabName		set current settings of firstTab to settings set "Pro"		set bounds of window 1 to {30, 30, 850, 700}	end tell		tell application "Terminal"		close window 2	end tellend newTerminalWindownewTerminalWindow("Trunk", "cd /Users/bgrohman/Development/trunk/")newTerminalTab("PPlanner", "cd /Users/bgrohman/Development/pplanner/")newTerminalTab("Platform", "cd /usr/local/niceplatform/;platformctl status")newTerminalTab("Liferay Log", "cd /usr/local/niceplatform/liferay/apache-tomcat-7.0.35/logs;tail -f catalina.out")</string>
+					<string>on newTerminalTab(tabName, tabCommand)	tell application "System Events" to tell process "Terminal.app" to keystroke "t" using command down	tell application "Terminal"		set currentTab to do script tabCommand in window 1		set custom title of currentTab to tabName	end tell
+	delay 1end newTerminalTabon newTerminalWindow(tabName, tabCommand)	tell application "Terminal"		activate	end tell		tell application "Terminal"		activate		set firstTab to do script tabCommand		set custom title of firstTab to tabName		set current settings of firstTab to settings set "Pro"		set bounds of window 1 to {30, 30, 850, 700}	end tell		tell application "Terminal"		close window 2	end tellend newTerminalWindownewTerminalWindow("Trunk", "cd /Users/bgrohman/Development/trunk/")newTerminalTab("PPlanner", "cd /Users/bgrohman/Development/pplanner/")newTerminalTab("Platform", "cd /usr/local/niceplatform/;platformctl status")newTerminalTab("Liferay Log", "cd /usr/local/niceplatform/liferay/apache-tomcat-7.0.35/logs;tail -f catalina.out")</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -105,7 +106,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>546.500000:628.000000</string>
+				<string>769.500000:876.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
